@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>http1.1 vs http 2.0</title>
+</head>
+<body>
+    <h1 style="text-align:center;color:white;background-color: #2c4899;"><b>HTTP 1.1 VS HTTP 2.0</b></h1>
+
+    <div>
+        <img src="img/1.jpg" alt="" style="float: left;width:50%;height:50%;">
+    </div><br>
+    <div style="margin: 50px;">
+    <h3 style="color: #2c4899;">What is HTTP? Why is HTTP/2 faster than HTTP/1.1?</h3>
+    
+    <p>HTTP stands for hypertext transfer protocol, and it is the basis for almost all web applications. More specifically, HTTP is the method computers and servers use to request and send information. For instance, when someone navigates to cloudflare.com on their laptop, their web browser sends an HTTP request to the Cloudflare servers for the content that appears on the page. Then, Cloudflare servers send HTTP responses with the text, images, and formatting that the browser displays to the user.
+    </p><br>
+    <h3 style="color: #2c4899;">What is HTTP/1.1?</h3>
+    <p>The first usable version of HTTP was created in 1997. Because it went through several stages of development, this first version of HTTP was called HTTP/1.1. This version is still in use on the web.
+    </p><br>
+    <h3 style="color: #2c4899;">What is HTTP/2?</h3>
+    <p>In 2015, a new version of HTTP called HTTP/2 was created. HTTP/2 solves several problems that the creators of HTTP/1.1 did not anticipate. In particular, HTTP/2 is much faster and more efficient than HTTP/1.1. One of the ways in which HTTP/2 is faster is in how it prioritizes content during the loading process.
+    </p>
+
+</div>
+<div style="margin: 50px;">
+    <h3 style="color: #2c4899;">What are the other differences between HTTP/2 and HTTP/1.1 that impact performance?</h3>
+    <p><mark><b>Multiplexing:</b></mark> HTTP/1.1 loads resources one after the other, so if one resource cannot be loaded, it blocks all the other resources behind it. In contrast, HTTP/2 is able to use a single TCP connection to send multiple streams of data at once so that no one resource blocks any other resource. HTTP/2 does this by splitting data into binary-code messages and numbering these messages so that the client knows which stream each binary message belongs to.
+    </p>
+    <br>
+    <p><mark><b>Server push:</b></mark> Typically, a server only serves content to a client device if the client asks for it. However, this approach is not always practical for modern webpages, which often involve several dozen separate resources that the client must request. HTTP/2 solves this problem by allowing a server to "push" content to a client before the client asks for it. The server also sends a message letting the client know what pushed content to expect – like if Bob had sent Alice a Table of Contents of his novel before sending the whole thing.
+    </p>
+    <br>
+    <p><mark><b>Header compression:</b></mark> Small files load more quickly than large ones. To speed up web performance, both HTTP/1.1 and HTTP/2 compress HTTP messages to make them smaller. However, HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets. This eliminates a few bytes from every HTTP packet. Given the volume of HTTP packets involved in loading even a single webpage, those bytes add up quickly, resulting in faster loading.</p>
+</div>
+</body>
+</html>
